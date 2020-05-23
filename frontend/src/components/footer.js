@@ -7,9 +7,9 @@ const Footer = () => {
             <div>
                 <ul className='footer-list'>
                     <li>Snake Eyes © 2020</li>
-                    <li><Link to="/">Contact</Link></li>
-                    <li><Link to="/">Privacy Policy</Link></li>
-                    <li><Link to="/">Terms of Service</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/privacy">Privacy Policy</Link></li>
+                    <li><Link to="/terms">Terms of Service</Link></li>
 
                 </ul>
             </div>

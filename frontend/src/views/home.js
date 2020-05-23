@@ -1,5 +1,5 @@
 import React from "react";
-import IconButton from "../../components/icon-buttons";
+import IconButton from "../components/icon-buttons";
 import EuroSymbolIcon from '@material-ui/icons/EuroSymbol';
 import StarIcon from '@material-ui/icons/Star';
 import SportsHandballIcon from '@material-ui/icons/SportsHandball';
