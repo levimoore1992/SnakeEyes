@@ -65,6 +65,7 @@ color: #333;
 box-sizing: border-box;
 display: block;
 text-align: center;
+position: absolute;
 bottom: 0;
 width: 100%;
 padding-top: 10px;
@@ -83,3 +84,17 @@ height: 60px;
   list-style: none;
 }
 
+.contact-main{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  border: #777777;
+  border-style: double;
+  padding: 10px
+}
+
+.contact-content{
+  margin-left: 10px;
+}
