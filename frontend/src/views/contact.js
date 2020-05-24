@@ -1,33 +1,21 @@
 import React from "react";
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-
-
+import {useForm} from "react-hook-form";
+import axios from 'axios';
 const Contact = () => {
+    const {register, handleSubmit, watch, errors} = useForm();
+    const onSubmit = data => {
+        console.log(data)
+    }
+
     return(
-        <div className={'contact-main'}>
-            <div className="contact-content">
-            <div>Were here to answer your questions</div>
-            <TextField
-              placeholder="Email Address"
-              label="What's your e-mail address?"
-              margin="normal"
-              fullWidth
-            />
-            <TextField
-              placeholder="Type your question here"
-              label="What's your question or issue?"
-              margin="normal"
-              fullWidth
-            />
+        <form onSubmit={handleSubmit(onSubmit)} className='contact-form'>
+            <legend>We're here to answer your questions</legend>
+            <hr/>
+            <input type="email" name='email-address' ref={register} placeholder='Whats your email' className='contact-form-input'/>
+            <textarea name="question" id="" cols="30" rows="10" ref={register} placeholder='Type your question  here' className='contact-form-input'/>
+            <button type='submit' className='contact-form-submit'>Send Email</button>
 
-            <Button
-              color="primary"
-              variant="contained"
-            >Send Email</Button>
-            </div>
-
-        </div>
+        </form>
     )
 }
 

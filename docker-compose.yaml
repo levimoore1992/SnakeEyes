@@ -1,6 +1,14 @@
 version: "3"
 
 services:
+  redis:
+    image: redis:3.0-alpine
+    command: redis-server
+    volumes:
+      - 'redis:/var/lib/redis/data'
+    ports:
+      - '6379:6379'
+
   db:
     image: postgres:10-alpine
     environment:
@@ -37,7 +45,15 @@ services:
     depends_on:
       - db
 
+  celery:
+    build: backend
+    command: celery -A backend worker -l info
+    depends_on:
+      - dj-snakeeyes
+      - db
+
 
 volumes:
   db:
+  redis:
 

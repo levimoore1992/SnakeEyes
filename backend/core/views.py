@@ -11,4 +11,4 @@ class SendContactEmail(APIView):
         message =  data.message
 
 
-        deliver_contact_email(email, message)
+        deliver_contact_email.delay((email, message))

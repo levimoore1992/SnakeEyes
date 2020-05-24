@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DjangoReactSkeleton.iml" filepath="$PROJECT_DIR$/.idea/DjangoReactSkeleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SnakeEyes.iml" filepath="$PROJECT_DIR$/.idea/SnakeEyes.iml" />
     </modules>
   </component>
 </project>
