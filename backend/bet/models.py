@@ -15,6 +15,7 @@ class Bet(models.Model):
     payout = models.FloatField()
     net = models.FloatField()
 
+
     @classmethod
     def is_winner(cls, guess, roll):
         if guess == roll:
